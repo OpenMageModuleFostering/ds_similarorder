@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ds_Similarorder>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Ds_Similarorder>
+    </modules>
+</config> 

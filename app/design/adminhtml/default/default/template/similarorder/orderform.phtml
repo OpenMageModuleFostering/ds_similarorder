@@ -1,0 +1,75 @@
+<?php 
+	$customerId = $this->getRequest()->getParams();
+	/* echo "<pre>"; print_r($customerId); exit; */ 
+	$orderId = $customerId['order_id']; 
+	$orders = Mage::getModel('sales/order')->load($orderId);
+	$oId = $orders->getIncrementId(); 
+	
+?>
+
+<div id="customer_info_tabs_customer_edit_tab_ordernote_content">
+	<form id="edit_form" name="edit_form" action="<?php echo $this->getUrl('similarorder/adminhtml_similarorder/filterbyorder'); ?>" method="post">
+	<?php echo $this->getBlockHtml('formkey')?>
+	<div class="entry-edit">
+		<div class="entry-edit-head">
+			<h4 class="icon-head head-edit-form fieldset-legend">Find Similer Orders:</h4>
+		</div>
+		<div id="ordergrid_form" class="fieldset">
+			<table class="form-list" cellspacing="0">
+				<tbody>
+					<tr>
+						<td class="label">
+							<label for="order_id">Odrer ID</label>
+						</td>
+						<td class="value">
+							<input id="order_id" class="input-text" type="text" value="<?php if(isset($oId) && $oId){ echo $oId; }  ?>" name="order_id" readonly />
+						</td>
+					</tr>
+					<tr>
+						<td class="label">
+							<label for="modes">Find Similer By</label>
+						</td>
+						<td class="value">
+							<?php /* <input type="checkbox" id="cookie" name="filter[]" value="cookie" <?php if(in_array("cookie", $customerId['filter'])) { echo 'checked="checked"'; } ?> />
+							 <label for="cookie" style="padding-right:10px;">Cookie</label> */ ?>
+							<input type="checkbox" id="ip" name="filter[]" class="search_check" value="IP" <?php if(in_array("IP", $customerId['filter'])) { echo 'checked="checked"'; } ?> /> 
+							<label for="ip" style="padding-right:10px;">IP</label>
+							<input type="checkbox" id="address" name="filter[]" class="search_check" value="Address" <?php if(in_array("Address", $customerId['filter'])) { echo 'checked="checked"'; } ?> />
+							<label for="address" style="padding-right:10px;">Billing Address</label>
+							<input type="checkbox" id="phone" name="filter[]" class="search_check" value="Phone" <?php if(in_array("Phone", $customerId['filter'])) { echo 'checked="checked"'; } ?> />
+							<label for="phone">Phone</label>
+						</td>
+					</tr>
+					<tr><td colspan="2">&nbsp;</td></tr>
+					<tr>
+						<td colspan="2" align="right">
+							<!--input id="add_note_submit" class="button" type="button" value="Add Note" /-->
+							<button id="add_search" class="add_search" type="button" title="Add Search" onclick="search(this)"><span><span>Search</span></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</form>
+</div>
+<script type="text/javascript">
+function search(thisform)
+{
+	var chec = document.getElementsByName('filter[]');
+	
+	var ln = 0;
+	for(var i=0; i< chec.length; i++) {
+		if(chec[i].checked)
+			ln++;
+	} 
+	if(ln == 0)
+	{
+		alert('please check at least one from IP/Address/Telephone.');
+		return false;
+	}
+	document.getElementById('edit_form').submit();
+
+	
+}
+</script>

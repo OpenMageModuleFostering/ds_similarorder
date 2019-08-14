@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <!-- <similarorder_adminhtml_similarorder_index>
+        <reference name="content">
+            <block type="similarorder/adminhtml_similarorder" name="similarorder" />
+        </reference>
+    </similarorder_adminhtml_similarorder_index> -->
+	<adminhtml_sales_order_index>
+		<reference name="head">
+			<action method="addCss"><name>css/custom_grid.css</name></action> 
+			<action method="addItem"><type>skin_js</type><name>js/custom_grid.js</name></action>
+        </reference>
+	</adminhtml_sales_order_index>
+    <similarorder_adminhtml_similarorder_index>
+        <reference name="content">
+            <block type="similarorder/adminhtml_orderform" name="orderform" />
+        </reference>
+    </similarorder_adminhtml_similarorder_index>
+	<adminhtml_sales_order_view>
+        <reference name="sales_order_tabs">
+            <action method="addTab">
+                <name>similarorder_view_tab</name>
+                 <block>similarorder/adminhtml_similarorder_view_tab_form</block>
+            </action>
+        </reference>
+	</adminhtml_sales_order_view>
+	<similarorder_adminhtml_similarorder_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="similarorder/adminhtml_similarorder_grid" name="similarorder_grid" />
+        </block>
+    </similarorder_adminhtml_similarorder_grid>
+</layout>

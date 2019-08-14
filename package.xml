@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package>
+    <name>Ds_Similarorder</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license>OSL 3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Find all similar orders based on same IP, Address and Telephone according to order Id.</summary>
+    <description>&lt;h3&gt;Main Features of this extension is find all similar orders based on same IP, Same address and same telephone&lt;/h3&gt;&#xD;
+&lt;p&gt;if your ecommerce site has long list of orders, Find similar order extension is for you because it displays same order according to same IP, same address and same telephone, which helps in fast search of order. &lt;/p&gt;&#xD;
+&lt;p&gt;&#xD;
+Using this extension, Admin can get find same address, same IP orders.&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+	&lt;li&gt;It allows automatic loading of the products with page scroll.&lt;/li&gt;&#xD;
+	&lt;li&gt;It offers great exposure to the website content.&lt;/li&gt;&#xD;
+	&lt;li&gt;It&#x2019;s perfect for touch-based devices.&lt;/li&gt;&#xD;
+	&lt;li&gt;It&#x2019;s responsive for all devices.&lt;/li&gt;&#xD;
+	&lt;li&gt;It&#x2019;s multi-store and multi-language supported.&lt;/li&gt;&#xD;
+	&lt;li&gt;It&#x2019;s 100% open source.&lt;/li&gt;&#xD;
+	&lt;li&gt;Multi browsers support : IE, FireFox, Safari, Chrome, Opera (fully tested)&lt;/li&gt;&#xD;
+	&lt;li&gt;User Friendly, Ultimate functionality with well designed and easy to customize.&lt;/li&gt;&#xD;
+	&lt;li&gt;Simply Enable/Disable module using configuration option.&lt;/li&gt;&#xD;
+&lt;/ul&gt;	&#xD;
+&lt;h3&gt;Installation&lt;/h3&gt;&#xD;
+&lt;p&gt;Go to magento connect manager and paste the extension key and click install.&lt;/p&gt;&#xD;
+&lt;p&gt;After installation,active catalog ajax scroll from admin by navigate below steps:&lt;/p&gt;&#xD;
+</description>
+    <notes>stable version </notes>
+    <authors><author><name>Dotsquares</name><user>dotsquaresltd</user><email>support.extensions@dotsquares.com</email></author></authors>
+    <date>2015-10-26</date>
+    <time>13:46:50</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Ds_Similarorder.xml" hash="1a9ae1f50115394e5f8da3f09a95d65b"/></dir></target><target name="magecommunity"><dir name="Ds"><dir name="Similarorder"><dir name="Block"><dir name="Adminhtml"><file name="Orderfilter.php" hash="4d62810674d3577ee724bdc27b0829a7"/><file name="Orderform.php" hash="9b25df4641834f68f390b17cc869d166"/><dir name="Similarorder"><file name="Grid.php" hash="0e395fcac42ae7636a4e396960afc136"/><dir name="View"><dir name="Tab"><file name="Form.php" hash="9876f2d7208b273400f56da8fef51784"/></dir></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="f4ae118172bfed1fcd5b9a9f564859eb"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Similarorder"><file name="Collection.php" hash="11e7750a0b375df1b8035541b50a4b6d"/></dir><file name="Similarorder.php" hash="532c88ffaccb1bc3f6305ef6bc9844c6"/></dir><file name="Similarorder.php" hash="60827a74bab254891880c4251b837a34"/><file name="Status.php" hash="501732a43db569502dfe4d10aefb12b9"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="SimilarorderController.php" hash="41b8e2376868ff73c8c2e4eaa5742511"/></dir></dir><dir name="etc"><file name="config.xml" hash="71b8028f4cbf3fc3b4187d9d2085638a"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="similarorder.xml" hash="baf303426b48115d959d8e7ce18a3766"/></dir><dir name="template"><dir name="similarorder"><file name="orderfilter.phtml" hash="9f4ae10fe6af6d597e9c52f32e4ee93c"/><file name="orderform.phtml" hash="fbebcb705b5ea8918cca05d35e60b2da"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="css"><file name="custom_grid.css" hash="890b3609421351c1a6f12dacb15fea10"/></dir><dir name="js"><file name="custom_grid.js" hash="3b9343fce873ed71f672696facfc4e6e"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

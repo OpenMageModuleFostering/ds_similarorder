@@ -1,0 +1,44 @@
+div.info{
+    position:relative; /*this is the key*/
+	background-color: #FA031C;
+    border-radius: 50%;
+    height: 10px;
+    /* overflow: hidden; */
+    padding: 5px 5px 5px;
+   /*  position: absolute; */
+   cursor:pointer;
+	top:17px;
+	left:25px;
+    text-align: center;
+    width: 10px;
+    z-index: 24;
+	text-indent:9999px;
+}
+div.api_no{
+    position:relative; /*this is the key*/
+	background-color: #03FA24;
+    border-radius: 50%;
+    height: 10px;
+    overflow: hidden;
+    padding: 5px 5px 5px;
+   /*  position: absolute; */
+	top:17px;
+	left:25px;
+    text-align: center;
+    width: 10px;
+    z-index: 24;
+	text-indent:20px;
+}
+div.info:hover{z-index:25;}
+div.info b{ /* color:#666666 */}
+div.info:hover span{ 
+	/*the span will display just on :hover state*/
+	float:left;
+    display:block;
+    position:absolute;
+    top:0px!important;  
+    border:1px solid #cccccc;
+    background-color:#FAFAFA; color:#444444;
+    text-align: left; left:30px; padding:5px 10px; font-size:12px; border-radius:5px;width:250px;
+	text-indent:0px;
+}
