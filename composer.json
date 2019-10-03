@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Ds_Similarorder",
+    "name": "OpenMageModuleFostering\/Ds_Similarorder",
     "type": "magento-module",
     "license": "OSL-3.0",
     "homepage": "",
     "description": "Find all similar orders based on same IP, Address and Telephone according to order Id.",
     "authors": [
-    {
-        "name": "Dotsquares",
-        "email": "support.extensions@dotsquares.com"
-    }
-],
+        {
+            "name": "Dotsquares",
+            "email": "support.extensions@dotsquares.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
